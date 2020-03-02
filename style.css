@@ -20,13 +20,15 @@ form{
 }
 
 textarea{
-	margin: 100px 0 100px;
+	margin-bottom: 100px;
 	width: 550px;
 	height: 450px;
 	padding: 50px;
 	font-size: 50px;
 	line-height: 50px;
 	border-radius: 50px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 	color: rgba(0,0,0,0.5);
 	display: inline-block;
 	resize: none;
@@ -45,5 +47,7 @@ textarea{
 }
 
 #clear{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 	margin-top: 100px;
 }

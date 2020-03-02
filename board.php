@@ -21,6 +21,7 @@
 				echo $t;
 			endif;
 			?></textarea>
+
 		<?php if (!isset($_GET["text"])):  ?>
 			<input class="item" type="submit" value="Biu ~">
 		<?php else: ?>
