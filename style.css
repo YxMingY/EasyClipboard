@@ -60,10 +60,10 @@ textarea{
 
 @keyframes slide-down{
 	from{
-		transform: translateY(-120%);
+		transform: translateY(-120%) rotate(400deg);
 	}
 	to{
-		transform: translateY(0%);
+		transform: translateY(0%) rotate(0deg);
 	}
 }
 
