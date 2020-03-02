@@ -14,5 +14,7 @@ function focusinput(ele){
 		ele.style.color = "rgba(0,0,0,0.5)";
 		ele.value = "输入你的内容";
 		document.getElementById("clear").innerHTML = ">_<没有吃的";
+	}else{
+		ele.style.color = "#000";
 	}
 }
