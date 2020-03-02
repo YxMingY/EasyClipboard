@@ -11,8 +11,11 @@
 	if (isset($_GET["text"]))
 		file_put_contents("text.tmp",$_GET["text"])
 	?>
+
 	<form>
-		<textarea name="text" onfocus="inputting(this)" onblur="inputting(this)" required><?php if(!file_exists("text.tmp") || ($t=file_get_contents("text.tmp")) == ""):
+		<button id="clear" type="button" class="item" onclick="
+	cleararea(this);">>_<没有吃的</button>
+		<textarea id="text" name="text" onfocus="focusinput(this)" onblur="focusinput(this)"><?php if(!file_exists("text.tmp") || ($t=file_get_contents("text.tmp")) == ""):
 				echo "输入你的内容";
 			else:
 				echo $t;
@@ -21,8 +24,12 @@
 		<?php if (!isset($_GET["text"])):  ?>
 			<input class="item" type="submit" value="Biu ~">
 		<?php else: ?>
-			<div class="item">打中啦！</div>
+			<div class="item" type="button" >打中啦！</div>
 		<?php endif; ?>
+		<script type="text/javascript">
+			if(document.getElementById("text").value != "输入你的内容")
+				document.getElementById("clear").innerHTML = "↓吃掉↓";
+		</script>
 	</form>
 </body>
 </html>
