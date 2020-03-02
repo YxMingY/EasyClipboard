@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>简易剪贴板</title>
+	<title>小铭留言板</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
 	<script src="script.js"></script>
