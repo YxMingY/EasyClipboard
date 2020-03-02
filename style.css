@@ -4,6 +4,7 @@
 	padding : 0;
 	text-decoration: none;
 	border: none;
+	outline: none;
 }
 
 body{
@@ -17,6 +18,8 @@ form{
 	height: 100vh;
 	text-align: center;
 	border-radius: 50px;
+	display: block;
+	animation: slide-up 0.5s;
 }
 
 textarea{
@@ -32,6 +35,7 @@ textarea{
 	color: rgba(0,0,0,0.5);
 	display: inline-block;
 	resize: none;
+	animation: slide-down 0.5s;
 }
 
 .item{
@@ -45,6 +49,74 @@ textarea{
 	color: #fff;
 	display: inline-block;
 }
+
+.slide-right{
+	animation: slide-right 1.2s linear;
+}
+
+.slide-left{
+	animation: slide-left 1.2s linear;
+}
+
+@keyframes slide-down{
+	from{
+		transform: translateY(-120%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+
+@keyframes slide-up{
+	from{
+		transform: translateY(120%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+
+@keyframes slide-right{
+	0%{
+		transform: translateX(-120%);
+	}
+	50%{
+		transform: translateX(-120%);
+	}
+	67%{
+		transform: translateX(0%);
+	}
+	83%{
+		transform: translateX(10%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slide-left{
+	0%{
+		transform: translateX(120%);
+	}
+	50%{
+		transform: translateX(120%);
+	}
+	67%{
+		transform: translateX(0%);
+	}
+	83%{
+		transform: translateX(-10%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+.item:active{
+	box-shadow: 0 0 7.5px rgba(0,0,0,1);
+}
+
+
 
 #clear{
 	border-bottom-left-radius: 0;

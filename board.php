@@ -13,7 +13,7 @@
 	?>
 
 	<form>
-		<button id="clear" type="button" class="item" onclick="
+		<button id="clear" type="button" class="item slide-right" onclick="
 	cleararea(this);">>_<没有吃的</button>
 		<textarea id="text" name="text" onfocus="focusinput(this)" onblur="focusinput(this)"><?php if(!file_exists("text.tmp") || ($t=file_get_contents("text.tmp")) == ""):
 				echo "输入你的内容";
@@ -23,7 +23,7 @@
 			?></textarea>
 
 		<?php if (!isset($_GET["text"])):  ?>
-			<input class="item" type="submit" value="Biu ~">
+			<input class="item slide-left" type="submit" value="Biu ~">
 		<?php else: ?>
 			<div class="item" type="button" >打中啦！</div>
 		<?php endif; ?>
