@@ -25,7 +25,7 @@
 		<?php if (!isset($_POST["text"])):  ?>
 			<input class="item slide-left" type="submit" value="Biu ~">
 		<?php else: ?>
-			<div class="item" type="button" >打中啦！</div>
+			<div class="item slide-left" type="button" >打中啦！</div>
 		<?php endif; ?>
 		<script type="text/javascript">
 			if(document.getElementById("text").value != "输入你的内容")
