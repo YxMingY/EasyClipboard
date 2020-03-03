@@ -8,11 +8,11 @@
 </head>
 <body>
 	<?php 
-	if (isset($_GET["text"]))
-		file_put_contents("text.tmp",$_GET["text"])
+	if (isset($_POST["text"]))
+		file_put_contents("text.tmp",$_POST["text"])
 	?>
 
-	<form>
+	<form method="post">
 		<button id="clear" type="button" class="item slide-right" onclick="
 	cleararea(this);">>_<没有吃的</button>
 		<textarea id="text" name="text" onfocus="focusinput(this)" onblur="focusinput(this)"><?php if(!file_exists("text.tmp") || ($t=file_get_contents("text.tmp")) == ""):
@@ -22,7 +22,7 @@
 			endif;
 			?></textarea>
 
-		<?php if (!isset($_GET["text"])):  ?>
+		<?php if (!isset($_POST["text"])):  ?>
 			<input class="item slide-left" type="submit" value="Biu ~">
 		<?php else: ?>
 			<div class="item" type="button" >打中啦！</div>
